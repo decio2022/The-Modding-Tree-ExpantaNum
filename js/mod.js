@@ -1,8 +1,8 @@
 let modInfo = {
 	name: "The Modding Tree",
 	id: "mymod",
-	author: "",
-	pointsName: "points",
+	author: "decio2022",
+	pointsName: "cash",
 	discordName: "",
 	discordLink: "",
 	initialStartPoints: new ExpantaNum (10), // Used for hard resets and new players
@@ -34,15 +34,6 @@ function getStartPoints(){
 // Determines if it should show points/sec
 function canGenPoints(){
 	return true
-}
-
-// Calculate points/sec!
-function getPointGen() {
-	if(!canGenPoints())
-		return new ExpantaNum(0)
-
-	let gain = new ExpantaNum(1)
-	return gain
 }
 
 // You can add non-layer related variables that should to into "player" and be saved here, along with default values

@@ -57,6 +57,8 @@ addLayer("U", {
             },
             effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" }, 
             cost: new ExpantaNum(10),
+            currencyLocation: player,
+            currencyDisplayName: "cash",
         },
     },
     layerShown(){return true}

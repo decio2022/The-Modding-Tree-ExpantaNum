@@ -80,6 +80,9 @@ addLayer("R", {
         let gain = player.points.pow(0.25).max(0)
         return gain.floor()
     },
+    getNextAt() {
+        return 1
+    },
     hotkeys: [
         {key: "r", description: "R: Reset for rebirth points", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],

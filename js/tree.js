@@ -53,6 +53,7 @@ addLayer("U", {
             description: "Multiply cash by rebirth points(extremely strong later on).",
             effect() {
                 let spt2 = player.rebirth.points.max(1).times(100)
+                return spt2
             },
             effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" }, 
             cost: new ExpantaNum(10),
@@ -74,15 +75,16 @@ addLayer("R", {
     resource: "rebirth points", // Name of prestige currency
     baseResource: "points", // Name of resource prestige is based on
     baseAmount() {return player.points}, // Get the current amount of baseResource
-    type: "custom", // normal: cost to gain currency depends on amount gained. static: cost depends on how much you already have
+    type: "normal", // normal: cost to gain currency depends on amount gained. static: cost depends on how much you already have
+    exponent: 0.25, // Prestige currency exponent
+    gainMult() { // Calculate the multiplier for main currency from bonuses
+        mult = new ExpantaNum(1)
+        return mult
+    },
+    gainExp() { // Calculate the exponent on main currency from bonuses
+        return new ExpantaNum(1)
+    },
     row: "side", // Row the layer is in on the tree (0 is the first row)
-    getResetGain() {
-        let gain = player.points.pow(0.25).max(0)
-        return gain.floor()
-    },
-    getNextAt() {
-        return 1
-    },
     hotkeys: [
         {key: "r", description: "R: Reset for rebirth points", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],

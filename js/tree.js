@@ -62,7 +62,7 @@ addLayer("U", {
             unlocked(){ return True },
         },
     },
-    layerShown(){return True}
+    layerShown(){return true}
 })
 
 addLayer("R", {
@@ -91,5 +91,5 @@ addLayer("R", {
     hotkeys: [
         {key: "r", description: "R: Reset for rebirth points", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
-    layerShown(){return True}
+    layerShown(){return true}
 })

@@ -20,7 +20,7 @@ function getPointGen() {
 		return new ExpantaNum(0)
 
 	let gain = new ExpantaNum(1)
-    if (hasupgrade("U", 11)) gain = gain.times(upgradeEffect("U", 11))
+    if (hasUpgrade("U", 11)) gain = gain.times(upgradeEffect("U", 11))
 	return gain
 }
 

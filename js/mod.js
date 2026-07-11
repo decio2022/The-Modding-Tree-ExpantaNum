@@ -5,6 +5,7 @@ let modInfo = {
 	pointsName: "cash",
 	discordName: "",
 	discordLink: "",
+	modFiles: ["tree.js"]
 	initialStartPoints: new ExpantaNum (10), // Used for hard resets and new players
 	
 	offlineLimit: 1,  // In hours

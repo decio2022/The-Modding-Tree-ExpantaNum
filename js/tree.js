@@ -52,7 +52,7 @@ addLayer("U", {
             title: "Multiplier I",
             description: "Multiply cash by rebirth points(extremely strong later on).",
             effect() {
-                let spt2 = player.rebirth.points.max(1).times(100)
+                let spt2 = player.R.points.max(1).times(100)
                 return spt2
             },
             effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" }, 

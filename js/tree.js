@@ -59,7 +59,6 @@ addLayer("U", {
             cost: new ExpantaNum(10),
             currencyLocation: "points",
             currencyDisplayName: "cash",
-            unlocked(){ return True },
         },
     },
     layerShown(){return true}

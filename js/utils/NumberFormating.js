@@ -81,10 +81,6 @@ function toPlaces(x, precision, maxAccepted) {
     return result
 }
 
-function formatSmall(x, precision=2) { 
-    return format(x, precision, true)    
-}
-
 function invertOOM(x){
     let e = x.log10().ceil()
     let m = x.div(Decimal.pow(10, e))
